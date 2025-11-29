@@ -1,0 +1,238 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Secciones de productos */
+.productos-section {
+    margin: 3rem 0;
+}
+
+.productos-section h2 {
+    font-size: 2rem;
+    color: #e74c3c;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e74c3c;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Tarjetas de productos */
+.producto-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.producto-card h3 {
+    color: #e74c3c;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.ingredientes h4, .preparacion h4 {
+    color: #2c3e50;
+    margin: 1rem 0 0.5rem;
+}
+
+.ingredientes ul {
+    list-style-type: none;
+    margin-left: 1rem;
+}
+
+.ingredientes li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.ingredientes li:before {
+    content: "•";
+    color: #e74c3c;
+    position: absolute;
+    left: 0;
+}
+
+.preparacion p {
+    background: #f8f9fa;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border-left: 4px solid #e74c3c;
+}
+
+.valor-total {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #ddd;
+    font-weight: bold;
+    text-align: right;
+}
+
+.valor-total span {
+    color: #e74c3c;
+    font-size: 1.2rem;
+}
+
+/* Resumen del inventario */
+.resumen-inventario {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 3rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resumen-inventario h2 {
+    color: #e74c3c;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.resumen-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.total-productos, .valor-total-inventario {
+    flex: 1;
+    min-width: 250px;
+}
+
+.total-productos h3, .valor-total-inventario h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.valor-grande {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #e74c3c;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 2rem 0 1rem;
+}
+
+.redes-sociales h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.redes-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.red-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.red-social:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.red-social i {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.red-social.rappi i {
+    color: #00c853;
+}
+
+.red-social span {
+    font-size: 0.9rem;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .resumen-content {
+        flex-direction: column;
+    }
+    
+    .redes-links {
+        gap: 1rem;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+}
